@@ -1,34 +1,28 @@
-# OS4 Solutions frontend
+# OS4 Solutions
 
-A static service-site frontend for Ava Hall's OS4 Solutions presentation. It uses
-HTML, CSS and vanilla JavaScript for responsive navigation, service tabs, FAQ
-accordions, section highlighting and contact interactions. Local fonts and an
-abstract system illustration are included in `assets/`.
+Ava Hall's OS4 Solutions website, built with HTML, CSS and vanilla JavaScript.
+It includes service tabs, FAQ accordions, responsive navigation and contact tools,
+with local fonts and a system illustration in `assets/`.
 
 ## Run locally
-
-No build tool or dependency installation is required:
 
 ```bash
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Open `http://localhost:8000`. Keep `index.html`, `styles.css`, `script.js` and
-`assets/` together when serving statically.
+Open `http://localhost:8000`. No build or dependency installation is needed. Keep
+`index.html`, `styles.css`, `script.js` and `assets/` together when serving the site.
 
-## Working behavior and limits
+## Contact form
 
-The contact form validates locally and opens a prepared `mailto:` draft; it does
-not submit to a server or confirm message delivery. Copy-email uses the browser
-clipboard when available. The repository has a `CNAME` for `os4solutions.tech`;
-that configuration alone does not verify current DNS, hosting or a live business
-service. This repository demonstrates the frontend implementation, not client
-engagements or independently validated operational capabilities.
+The form checks the fields and opens an email draft in the visitor's mail app.
+The visitor sends the message from there. The copy-email button copies the address
+when the browser supports clipboard access.
 
-Run `node --check script.js` after JavaScript changes. Manually check keyboard
-navigation, tabs, FAQs, reduced-motion behavior and contact validation in a browser.
-No automated test/build command is configured.
+## Development
 
-Preserve the included Manrope and DM Mono licence notices in `assets/fonts/`.
-Review the provenance/permissions of illustrations and other assets before reuse;
-no new source-code or asset licence is granted by this README.
+Run `node --check script.js` after JavaScript changes. Check the navigation, service
+tabs, FAQs, reduced-motion setting and contact form in a browser after interface
+changes.
+
+The Manrope and DM Mono licences are included in `assets/fonts/`.
